@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+<body id="body">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#" aria-haspopup="true">Click Here</a>
+          <ul>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li>
+              <div class="container">
+                <h2 class="mode-status">Currently in Light Mode</h2>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="mode-toggle">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>My Personal Website</h1>
+    <section>
+      <h2>Introduction</h2>
+      <p>Hello, and thank you for visiting my site. My name is Israel Florentino, and I am a new and upcoming software developer. I created this website to track my progress in HTML, CSS, and Javascript.</p>
+    </section>
+    <section>
+      <h2>About Me</h2>
+      <p>At 26 years old, I embarked on a journey into the world of software development with a burning curiosity to unravel the mysteries of website creation, its structure, and design. Web development has always been a mystery to me, and I find myself most confident and enthusiastic in this field. However, I acknowledge that this is merely the beginning of my learning process, and there is still so much more to explore and master. If you want to get to know me more, visit my <a href="https://www.instagram.com/" target="_blank">Instagram</a>.</p>
+    </section>
+  </main>
+  <section>
+    <h2>What's on the site?</h2>
+    <p>There is a blog section where I share my personal experiences, insights, and tips related to web development. I discuss industry trends, the latest technologies, and strategies to overcome common coding challenges. Just know I am still learning with you. So have patience because patience is key. There is also navigation links to my progress in software development.</p>
+    <p>Don't miss out on exciting opportunities, special offers, and fresh content delivered right to your inbox. Join our community of passionate developers and tech enthusiasts, and let's embark on this exciting journey together. Stay informed, inspired, and connected with the dynamic world of software development by signing up for our newsletter today!</p>
+  </section>
+  <aside>
+    <h2>Blog</h2>
+    <p>The path to becoming a web developer seems stressful and complicated, but I have to give it my all if I want to succeed. I believe I have the basic knowledge of HTML; however, I know there's tons of new and exciting ways to learn. One thing I've found interesting is that anyone can build a website. You just have to put in the time to create websites that look like they belong in art galleries.</p>
+  </aside>
+  <section id="portfolio">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <img src="project1.png" alt="Project 1">
+        <h3>Built a to-do list</h3>
+        <p>Build a simple to do list with the ability to create and delete elements. <a href="https://github.com/israel131997/projects10" target="_blank">View on Github.</a></p>
+      </div>
+      <div class="project">
+        <img src="project2.png" alt="Project 2">
+        <h3>Slide in on slide scroll</h3>
+        <p>Adding a fade-and-slide-in on scroll effect to DOM elements<a href="https://github.com/israel131997/projects10" target="_blank">View on Github.</a></p>
+      </div>
+      <div class="project">
+        <img src="project3.png" alt="Project 3">
+        <h3>Quiz</h3>
+        <p>Created a quiz using jQuery</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <form id="contactForm" action="#" method="post">
+      <h2>Sign up for my newsletter</h2>
+      <p>Please fill in this form to be a part of my journey.</p>
+      <label for="fullName">Full Name</label>
+      <input type="text" placeholder="Enter Full Name" name="fullName" id="fullName" required>
+      <div class="error-message" id="fullNameError"></div>
+      
+      <label for="email">Email</label>
+      <input type="email" placeholder="Enter Email" name="email" id="email" required>
+      <div class="error-message" id="emailError"></div>
+      
+      <label for="phoneNumber">Phone #</label>
+      <input type="tel" placeholder="Phone #" name="phoneNumber" id="phoneNumber" required>
+      <div class="error-message" id="phoneNumberError"></div>
+      
+      <button type="submit" class="registerbtn" id="submitBtn" disabled>Submit</button>
+      <p class="success-message" id="successMessage">Your form has been submitted successfully!</p>
+    </form>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

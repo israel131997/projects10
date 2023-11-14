@@ -1,0 +1,360 @@
+/* Variables for light and dark mode colors */
+:root {
+  --text-color: #333;
+  --background-color: #fff;
+}
+
+/* Light mode styles */
+[data-theme="light"] {
+  --text-color: #333;
+  --background-color: #fff;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  --text-color: #f0f0f0;
+  --background-color: #111;
+}
+
+/* Reset some default browser styles */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* Improve header styles */
+header {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the nav */
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f1c40f;
+}
+
+/* Style main content sections */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+main h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 24px;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Improve section and aside styles */
+section, aside {
+  padding: 20px;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+section h2, aside h2 {
+  font-size: 24px;
+}
+
+/* Style the footer */
+footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Dark mode styles for specific elements */
+[data-theme="dark"] header {
+  background-color: #333;
+}
+
+[data-theme="dark"] nav a {
+  color: white;
+}
+
+/* Style the form */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+form h2 {
+  font-size: 24px;
+  text-align: center;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #f1c40f;
+}
+
+/* Style the modal */
+.modal-content {
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Style the project grid as a flex container */
+.project-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Style individual project items */
+.project {
+  flex: 0 0 calc(50% - 20px);
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project p {
+  margin-top: 10px;
+}
+
+/* Dark mode styles for the toggle switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 2.13rem;
+  margin-bottom: 0.63rem;
+  margin-inline: auto;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: all 0.4s ease-in;
+  border-radius: 2.13rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.63rem;
+  width: 1.63rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Adjust the toggle switch styles for dark mode */
+[data-theme="dark"] .toggle-switch .slider {
+  background-color: #333;
+}
+
+[data-theme="dark"] .toggle-switch input:checked + .slider:before {
+  transform: translateX(1.63rem);
+}
+
+/* Dark mode styles for the form */
+[data-theme="dark"] form {
+  background-color: #111; /* Dark background color */
+  color: white; /* Light text color */
+  border-color: #333; /* Dark border color */
+}
+
+/* Dark mode styles for the modal */
+[data-theme="dark"] .modal-content {
+  background-color: #333; /* Dark background color */
+  color: white; /* Light text color */
+  border-color: #555; /* Dark border color */
+}
+
+/* Dark mode styles for the project items */
+[data-theme="dark"] .project {
+  background-color: #111; /* Dark background color */
+  color: white; /* Light text color */
+  border-color: #333; /* Dark border color */
+}
+
+/* Add animation for the theme transition */
+html.theme-transition {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Add animation styles for specific elements */
+/* Define the fade-and-slide-in animation */
+@keyframes fadeAndSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the elements */
+html.theme-transition, /* Apply animation to the entire page */
+html.theme-transition header, /* Apply animation to header */
+html.theme-transition nav a, /* Apply animation to navigation links */
+html.theme-transition form, /* Apply animation to the form */
+html.theme-transition .modal-content, /* Apply animation to modal content */
+html.theme-transition .project /* Apply animation to project items */ {
+  animation: fadeAndSlideIn 0.5s ease-in-out;
+}
+
+/* Apply transition for smoother color changes */
+html.theme-transition {
+  transition: background-color 0.4s, color 0.4s;
+}
+
+html.theme-transition header {
+  transition: background-color 0.4s;
+}
+
+html.theme-transition nav a {
+  transition: color 0.4s;
+}
+
+html.theme-transition form {
+  transition: background-color 0.4s, border-color 0.4s;
+}
+
+html.theme-transition .modal-content {
+  transition: background-color 0.4s, border-color 0.4s;
+}
+
+html.theme-transition .project {
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+/* Style invalid input fields */
+.invalid {
+  border: 2px solid #ff6b6b;
+}
+
+/* Style error messages */
+.error-message {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-top: 4px;
+  display: none;
+}
+
+/* Style success message */
+.success-message {
+  color: #4caf50;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+  display: none;
+}
+
+
+
+
+
+
